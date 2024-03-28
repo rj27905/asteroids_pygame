@@ -13,8 +13,8 @@ clock = pygame.time.Clock()
 win = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption('Asteroids')
 
-gunshot_sound = pygame.mixer.Sound("music/laser.wav")
-explosion_sound = pygame.mixer.Sound("music/explosion.mp3")
+gunshot_sound = pygame.mixer.Sound("Asteroids_music_laser.wav")
+explosion_sound = pygame.mixer.Sound("Asteroids_music_explosion.mp3")
 
 font = pygame.font.Font('freesansbold.ttf', 32)
 
@@ -41,7 +41,7 @@ all_sprites.add(rocket)
 backgrounds = [f'assets/background/bg{i}s.png' for i in range(1,5)]
 bg = pygame.image.load(random.choice(backgrounds))
 
-startbg = pygame.image.load('assets/start.jpg')
+startbg = pygame.image.load('start.jpg')
 
 start_font = pygame.font.Font('freesansbold.ttf', 64)
 start_text = start_font.render('Press SPACE to Start', True, (255, 255, 255))
@@ -149,3 +149,4 @@ while True:
 
     pygame.display.flip()
     clock.tick(30)
+
